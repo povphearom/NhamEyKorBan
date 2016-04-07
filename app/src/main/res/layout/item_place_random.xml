@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="placeRandom"
+            type="com.borama.zesb.nhameykorban.viewmodels.PlaceViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            app:bindSrc="@{placeRandom.photo}"
+            android:src="@drawable/ic_home" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:gravity="center"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:text="@{placeRandom.name}"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
+    </android.support.v7.widget.CardView>
+</layout>

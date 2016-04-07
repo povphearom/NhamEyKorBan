@@ -1,0 +1,57 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="places"
+            type="com.borama.zesb.nhameykorban.viewmodels.PlacesViewModel" />
+
+        <variable
+            name="view"
+            type="com.borama.zesb.nhameykorban.ui.fragment.ShopPlaceFragment" />
+    </data>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/board"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="2dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/please_choose_your_prefer_place" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk_Place_All"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@{places.checkedAll}" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerPlace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:clickHandler="@{view.checkHandler}"
+            app:itemViewBinder="@{view.itemViewBinder}"
+            app:items="@{places.items}"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</layout>

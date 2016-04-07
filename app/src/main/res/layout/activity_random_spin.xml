@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="spinResult"
+            type="com.borama.zesb.nhameykorban.viewmodels.SpinViewModel" />
+
+        <variable
+            name="spins"
+            type="com.borama.zesb.nhameykorban.viewmodels.SpinsViewModel" />
+
+        <variable
+            name="view"
+            type="com.borama.zesb.nhameykorban.ui.RandomPlaceActivity" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/spinToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.borama.zesb.ui.views.activities.SpinGiftActivity"
+            tools:showIn="@layout/activity_random_spin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="6dp"
+                android:text="@string/choose_place" />
+
+            <fragment
+                android:id="@+id/randomSpin"
+                class="com.borama.zesb.nhameykorban.ui.fragment.RandomFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spin_size"
+                tools:layout="@layout/fragment_spin_random" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="6dp"
+                android:text="@string/place_for_you" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerSpinAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"
+                    app:itemViewBinder="@{view.itemViewBinder}"
+                    app:items="@{spins.items}"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    app:spanCount="2" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/lilSpinResult"
+                    android:layout_width="@dimen/spin_normal_size"
+                    android:layout_height="@dimen/spin_normal_size"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:bindSrc="@{spinResult.url}" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:padding="4dp"
+                        android:text="@{spinResult.name}" />
+
+                </android.support.v7.widget.CardView>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

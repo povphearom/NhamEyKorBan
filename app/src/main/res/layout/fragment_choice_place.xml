@@ -1,0 +1,45 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="places"
+            type="com.borama.zesb.nhameykorban.viewmodels.PlacesViewModel" />
+
+        <variable
+            name="view"
+            type="com.borama.zesb.nhameykorban.ui.fragment.ChoicePlaceFragment" />
+    </data>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/board"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerPlace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:clickHandler="@{view.checkHandler}"
+            app:itemViewBinder="@{view.itemViewBinder}"
+            app:items="@{places.items}"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_Create"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:textColor="@color/white"
+            android:text="@string/create"
+            android:theme="@style/ButtonPrimary" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</layout>

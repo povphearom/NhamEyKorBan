@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:background="@color/board"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spin_size"
+        android:orientation="vertical">
+
+        <com.borama.zesb.api.widget.SpinRecyclerView
+            android:id="@+id/spinRecyclerGift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+        <View
+            android:id="@+id/spinCenterPin"
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_random_gift" />
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">ញ៉ាំអីក៏បាន</string>
+    <string name="action_settings">កំណត់</string>
+    <string name="about" translatable="false">អំពីយើង</string>
+    <string name="game" translatable="false">ហ្គេម</string>
+    <string name="group" translatable="false">ក្រុម</string>
+    <string name="nham_ey_kor_ban" translatable="false">ញ៉ាំអីក៏បាន</string>
+    <string name="title_menu" translatable="false">ម៉ីនុយ</string>
+    <string name="title_about" translatable="false">អំពីយើង</string>
+    <string name="power_by" translatable="false">ឧបត្ថម្ភដោយ ZeSocialBusiness</string>
+    <string name="title_group" translatable="false">ក្រុម</string>
+    <string name="drink_game" translatable="false">ហ្គេមឡុកឡាក់ផឹក</string>
+    <string name="normal_game" translatable="false">ហ្គេមឡុកឡាក់</string>
+    <string name="message_no_group" translatable="false">បង្កើតក្រុមដើម្បីលេងហ្គេមជាមួយមិត្តភក្ដរបស់អ្នក!</string>
+    <string name="alert_cancel" translatable="false">បោះបង់</string>
+    <string name="alert_save" translatable="false">រក្សាទុក</string>
+    <string name="alert_ok" translatable="false">យល់ព្រម</string>
+    <string name="message_member_create" translatable="false">សូមដាក់ឈ្មោះសមាជិកក្រុមរបស់អ្នក</string>
+    <string name="search" translatable="false">ស្វែងរក</string>
+    <string name="play">លេង</string>
+    <string name="title_activity_choice">ជ្រើសរើស</string>
+    <string name="done">រួចរាល់</string>
+    <string name="place_for_you">កន្លែងដែលជ្រើសរើសសំរាប់អ្នក</string>
+    <string name="choose_place">ជ្រើសរើសកន្លែង</string>
+    <string name="please_choose_your_prefer_place">សូមជ្រើសរើសកន្លែងដែលអ្នកចូលចិត្ត</string>
+    <string name="equalTo">ត្រូវនឹង</string>
+    <string name="title_playing_game">ការលេងហ្គេម</string>
+    <string name="play_again">លេងម្ដងទៀត</string>
+    <string name="start_spin_people">ចាប់ផ្ដើមបង្វិលសមាជិក</string>
+    <string name="the_result">លទ្ធផល</string>
+    <string name="list_of_place">បញ្ជីទីកន្លែងទាំងអស់</string>
+    <string name="title_game">ហ្គេម</string>
+    <string name="offline">អូហ្វឡាញ</string>
+    <string name="online">អនឡាញ</string>
+    <string name="place">កន្លែង</string>
+    <string name="message_place_create">សូមដាក់ឈ្មោះកន្លែងដែលអ្នកបានជ្រើសរើស</string>
+    <string name="alert_skip">រំលង</string>
+    <string name="drink_1">ផឹក១កែវ</string>
+    <string name="drink_2">រំលងជុំនេះ នឹង វេនក្រោយ</string>
+    <string name="drink_3">អ្នកនៅឆ្វេងដៃផឹក១</string>
+    <string name="drink_5">រើសម្នាក់ផឹក១កែវ</string>
+    <string name="drink_6">ផឹក១កែវជាមួយអ្នកនៅស្ដាំដៃ</string>
+    <string name="drink_7">ផឹក២កែវជាមួយអ្នកនៅស្ដាំដៃ</string>
+    <string name="drink_8">ផឹក១កែវជាមួយអ្នកនៅឆ្វេងដៃ</string>
+    <string name="drink_9">ផឹក២កែវជាមួយអ្នកនៅឆ្វេងដៃ</string>
+    <string name="create">បង្កើត</string>
+    <string name="spin">បង្វិល</string>
+    <string name="drink_10">ត្រឡប់ក្រោយ</string>
+    <string name="drink_4">អ្នកនៅស្ដាំដៃផឹក១</string>
+    <string name="drink_12">ទាំងអស់គ្នាផឹក១កែវ</string>
+    <string name="drink_11">បង្កើតច្បាប់</string>
+    <string name="condition">លក្ខខ័ណ្ឌ</string>
+    <string name="dice_1">ឡុកឡាក់១គ្រាប់</string>
+    <string name="dice_2">ឡុកឡាក់២គ្រាប់</string>
+    <string name="dice_3">ឡុកឡាក់៣គ្រាប់</string>
+    <string name="dice_4">ឡុកឡាក់៤គ្រាប់</string>
+    <string name="dice_5">ឡុកឡាក់៥គ្រាប់</string>
+    <string name="dice_6">ឡុកឡាក់៦គ្រាប់</string>
+    <string name="start_spin_dice">ចាប់ផ្ដើមបង្វិលគ្រាប់ឡុកឡាក់</string>
+    <string name="start_spin_dice_drink">ចាប់ផ្ដើមបង្វិលគ្រាប់ឡុកឡាក់ផឹក</string>
+    <string name="next">បន្ទាប់</string>
+    <string name="nham_eykorban">ញ៉ាំអីក៏បាន!</string>
+    <string name="oun_jong_nham_ey">អូនចង់ញ៉ាំអី?</string>
+    <string name="alert_invalid_check">ទីកន្លែងត្រូវតែច្រើនជាងមួយ!</string>
+    <string name="alert_invalid">សូមទោស,វាមានអ្វីមួយដែលមិនត្រឹមត្រូវ។</string>
+    <string name="alert_invalid_person">ចំនួនអ្នកលេងត្រូវតែច្រើនជាង​មួយនាក់។</string>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarAsk"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <FrameLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_margin="@dimen/fab_margin"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="100dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_ounjongnhamey"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/oun_jong_nham_ey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:layout_gravity="right|center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="120dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_nhameykorban"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/nham_eykorban"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_gravity="bottom|center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="120dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_angry"
+                        android:layout_height="wrap_content" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+
+            </FrameLayout>
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_Next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:theme="@style/ButtonPrimary" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

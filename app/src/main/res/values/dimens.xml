@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="alert_margin">24dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="spin_item_size">90dp</dimen>
+    <dimen name="spin_size">100dp</dimen>
+    <dimen name="spin_normal_size">160dp</dimen>
+    <dimen name="menu_size">160dp</dimen>
+    <dimen name="menu_image_size">85dp</dimen>
+    <dimen name="spin_image_size">50dp</dimen>
+</resources>

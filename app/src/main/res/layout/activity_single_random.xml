@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bases"
+            type="com.borama.zesb.nhameykorban.viewmodels.BasesViewModel" />
+
+        <variable
+            name="view"
+            type="com.borama.zesb.nhameykorban.ui.BaseSingleRandomActivity" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/spinToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.borama.zesb.ui.views.activities.SpinGiftActivity"
+            tools:showIn="@layout/activity_random_spin">
+
+            <TextView
+                android:id="@+id/txv_Label_Spin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="6dp"
+                android:text="@string/choose_place" />
+
+            <fragment
+                android:id="@+id/randomSpin"
+                class="com.borama.zesb.nhameykorban.ui.fragment.RandomFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spin_size"
+                tools:layout="@layout/fragment_spin_random" />
+
+            <TextView
+                android:id="@+id/txv_Label_Result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="6dp"
+                android:text="@string/list_of_place" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/board"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerSpinAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:itemViewBinder="@{view.itemViewBinder}"
+                    app:items="@{bases.items}"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    app:spanCount="2" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/lil_Result_Content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/frl_Content_Result"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_Play_Again"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/play_again"
+                        android:textColor="@color/white"
+                        android:theme="@style/ButtonPrimary" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </FrameLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

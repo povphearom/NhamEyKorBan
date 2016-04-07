@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="spinPerson"
+            type="com.borama.zesb.nhameykorban.viewmodels.PersonViewModel" />
+
+        <variable
+            name="spinThing"
+            type="com.borama.zesb.nhameykorban.viewmodels.SpinViewModel" />
+
+        <variable
+            name="view"
+            type="com.borama.zesb.nhameykorban.ui.GroupGameActivity" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/gameToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.borama.zesb.ui.views.activities.SpinGiftActivity"
+            tools:showIn="@layout/activity_random_spin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="@string/start_spin_people" />
+
+            <fragment
+                android:id="@+id/spinPeople"
+                class="com.borama.zesb.nhameykorban.ui.fragment.RandomFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spin_size"
+                tools:layout="@layout/fragment_spin_random" />
+
+            <TextView
+                android:id="@+id/txv_Spin_Games"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="@string/start_spin_dice" />
+
+            <fragment
+                android:id="@+id/spinThings"
+                class="com.borama.zesb.nhameykorban.ui.fragment.RandomFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spin_size"
+                tools:layout="@layout/fragment_spin_random" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="@string/the_result" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/board"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/lilResultPerson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="@dimen/spin_item_size"
+                        android:layout_height="@dimen/spin_item_size"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@{spinPerson.color}">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_person_white" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:padding="4dp"
+                        android:text="@{spinPerson.name}" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txv_Equal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/equalTo"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/lilResultThing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="@dimen/spin_item_size"
+                        android:layout_height="@dimen/spin_item_size"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@{spinThing.color}">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spin_image_size"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            app:bindRes="@{spinThing.url}" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="@{spinThing.name}" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_Play_Again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/play_again"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:theme="@style/ButtonPrimary" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

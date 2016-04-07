@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="menu"
+            type="com.borama.zesb.nhameykorban.viewmodels.MenuViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        app:cardUseCompatPadding="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@{menu.color}">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/menu_image_size"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            app:bindSrc="@{menu.icon}" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="@{menu.title}"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+    </android.support.v7.widget.CardView>
+</layout>

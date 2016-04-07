@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="spinGame"
+            type="com.borama.zesb.nhameykorban.viewmodels.SpinViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="@dimen/spin_item_size"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@{spinGame.color}">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_home"
+            app:bindRes="@{spinGame.url}" />
+
+    </android.support.v7.widget.CardView>
+</layout>

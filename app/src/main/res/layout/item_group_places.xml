@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="placeGroup"
+            type="com.borama.zesb.nhameykorban.viewmodels.PlaceGroupViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="4dp">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:padding="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:padding="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{placeGroup.name}" />
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/ic_brightness"
+                    android:foreground="?selectableItemBackground"
+                    android:onClick="@{placeGroup.onRemove}"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_clear" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.RecyclerView
+                android:padding="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/board"
+                app:hasDividerVertical="@{true}"
+                app:hasFixedSize="@{true}"
+                app:itemViewBinder="@{placeGroup.itemViewBinder}"
+                app:items="@{placeGroup.places}"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:nestedScroll="@{false}" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{placeGroup.onSpin}"
+                android:text="@string/spin"
+                android:textColor="@color/white"
+                android:theme="@style/ButtonPrimary" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.CardView>
+</layout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="spins"
+            type="com.borama.zesb.nhameykorban.viewmodels.SpinsViewModel" />
+
+        <variable
+            name="view"
+            type="com.borama.zesb.nhameykorban.ui.fragment.InfoGameDialogFragment" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarInfo"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txv_Game_Message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/fab_margin"
+                app:itemSpace="@{8}"
+                app:itemViewBinder="@{view.itemViewBinder}"
+                app:items="@{spins.items}"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_Play_Game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/play"
+                android:textColor="@color/white"
+                android:theme="@style/ButtonPrimary" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

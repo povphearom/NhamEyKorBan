@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="people"
+            type="com.borama.zesb.nhameykorban.viewmodels.PeopleViewModel" />
+
+        <variable
+            name="view"
+            type="com.borama.zesb.nhameykorban.ui.GroupActivity" />
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.borama.zesb.nhameykorban.ui.GroupActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:padding="4dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txv_Group_Message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/message_no_group"
+                    android:visibility="visible" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/lil_Group_Content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txv_Group_Date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerPeople"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:clickHandler="@{view.clickHandler}"
+                        app:hasFixedSize="@{true}"
+                        app:itemSpace="@{8}"
+                        app:itemViewBinder="@{view.itemViewBinder}"
+                        app:items="@{people.items}"
+                        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                        app:nestedScroll="@{false}"
+                        app:spanCount="3" />
+
+                    <!--//-->
+                    <RadioGroup
+                        android:id="@+id/radios"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:checkedButton="@+id/brd_Drink_Game"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/brd_Drink_Game"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/ic_dice_drink_choice"
+                            android:drawablePadding="8dp"
+                            android:drawableRight="@drawable/radio_button"
+                            android:foreground="?selectableItemBackground"
+                            android:gravity="left|center_vertical"
+                            android:padding="8dp"
+                            android:text="@string/drink_game"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/brd_Normal_Game"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/ic_dice_choice"
+                            android:drawablePadding="8dp"
+                            android:drawableRight="@drawable/radio_button"
+                            android:foreground="?selectableItemBackground"
+                            android:gravity="left|center_vertical"
+                            android:padding="8dp"
+                            android:text="@string/normal_game"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </RadioGroup>
+                    <!--//-->
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_Play_Game"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:text="@string/play"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/white"
+                        android:theme="@style/ButtonPrimary" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </FrameLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_Member_Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_person_add"
+            app:backgroundTint="@color/colorPrimary" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

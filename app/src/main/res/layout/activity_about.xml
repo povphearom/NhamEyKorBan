@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        tools:context="com.borama.zesb.nhameykorban.ui.AboutActivity">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_home" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_About_Download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?selectableItemBackground"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Download App"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:textColor="@color/white">
+
+                <include layout="@layout/power_by" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196f3</color>
+    <color name="colorPrimaryDark">#1e87db</color>
+    <color name="colorAccent">#2196f3</color>
+    <color name="board">#F2F2F2</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="menu_1">#27bee8</color>
+    <color name="menu_2">#a1d746</color>
+    <color name="menu_3">#ed3f6e</color>
+    <color name="menu_4">#d147af</color>
+    <color name="gray">#C2C2C2</color>
+
+    <color name="game_1">#44cfcb</color>
+    <color name="game_2">#8679db</color>
+
+    <color name="dice_1">#f5547a</color>
+    <color name="dice_2">#b5d33b</color>
+    <color name="dice_3">#5baceb</color>
+    <color name="dice_4">#5ebf7e</color>
+    <color name="dice_5">#ed705c</color>
+    <color name="dice_6">#7b54b0</color>
+
+    <color name="drink_1">#568ae3</color>
+    <color name="drink_2">#3cac37</color>
+    <color name="drink_3">#ebc431</color>
+    <color name="drink_4">#e95c9e</color>
+    <color name="drink_5">#6dd1de</color>
+    <color name="drink_6">#58bf75</color>
+    <color name="drink_7">#f2874d</color>
+    <color name="drink_8">#ac51a8</color>
+    <color name="drink_9">#4ac7ae</color>
+    <color name="drink_10">#99c938</color>
+    <color name="drink_11">#e67717</color>
+    <color name="drink_12">#4c66fc</color>
+</resources>
