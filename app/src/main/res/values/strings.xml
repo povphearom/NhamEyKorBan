@@ -1,74 +1,74 @@
 <resources>
-    <string name="app_name">NhamEyKorBan</string>
-    <string name="action_settings">Settings
+    <string name="app_name" translatable="false">NhamEyKorBan</string>
+    <string name="action_settings" translatable="false">Settings
 </string>
-    <string name="about">About Us</string>
-    <string name="game">Game</string>
-    <string name="group">Group</string>
-    <string name="nham_ey_kor_ban">Nham Ey Kor Ban</string>
-    <string name="title_menu">Menu</string>
-    <string name="title_about">About Us</string>
-    <string name="power_by">Powered by ZeSocialBusiness</string>
-    <string name="title_group">Group</string>
+    <string name="about" translatable="false">About Us</string>
+    <string name="game" translatable="false">Game</string>
+    <string name="group" translatable="false">Group</string>
+    <string name="nham_ey_kor_ban" translatable="false">Nham Ey Kor Ban</string>
+    <string name="title_menu" translatable="false">Menu</string>
+    <string name="title_about" translatable="false">About Us</string>
+    <string name="power_by" translatable="false">Powered by ZeSocialBusiness</string>
+    <string name="title_group" translatable="false">Group</string>
 
-    <string name="drink_game">Drink Game</string>
-    <string name="normal_game">Normal Game</string>​
-    <string name="message_no_group">Create group to play game with your friends</string>
-    <string name="message_member_create">Please put your group members name!</string>
-    <string name="message_place_create">Please put your place name!</string>
+    <string name="drink_game" translatable="false">Dice Drink Game</string>
+    <string name="normal_game" translatable="false">Dice Game</string>​
+    <string name="message_no_group" translatable="false">Create group to play game with your friends</string>
+    <string name="message_member_create" translatable="false">Please put your group members name!</string>
+    <string name="message_place_create" translatable="false">Please put your place name!</string>
 
-    <string name="alert_ok">OK</string>
-    <string name="alert_save">SAVE</string>
-    <string name="alert_cancel">CANCEL</string>
-    <string name="alert_skip">SKIP</string>
-    <string name="search">Search</string>
-    <string name="play">Play</string>
+    <string name="alert_ok" translatable="false">OK</string>
+    <string name="alert_save" translatable="false">SAVE</string>
+    <string name="alert_cancel" translatable="false">CANCEL</string>
+    <string name="alert_skip" translatable="false">SKIP</string>
+    <string name="search" translatable="false">Search</string>
+    <string name="play" translatable="false">Play</string>
 
-    <string name="title_activity_choice">Choice</string>
-    <string name="done">Done</string>
-    <string name="place_for_you">Place for you</string>
-    <string name="list_of_place">List of all places</string>
-    <string name="choose_place">Choose a place</string>
-    <string name="please_choose_your_prefer_place">Please choose your prefer place</string>
-    <string name="equalTo">Equal To</string>
-    <string name="title_playing_game">Playing Game</string>
-    <string name="play_again">Play Again</string>
-    <string name="start_spin_people">Start spin people</string>
-    <string name="start_spin_dice">Start spin dice</string>
-    <string name="start_spin_dice_drink">Start spin dice drink</string>
-    <string name="the_result">Result</string>
-    <string name="title_game">Game</string>
+    <string name="title_activity_choice" translatable="false">Choice</string>
+    <string name="done" translatable="false">Done</string>
+    <string name="place_for_you" translatable="false">Place for you</string>
+    <string name="list_of_place" translatable="false">List of all places</string>
+    <string name="choose_place" translatable="false">Choose a place</string>
+    <string name="please_choose_your_prefer_place" translatable="false">Please choose your prefer place</string>
+    <string name="equalTo" translatable="false">Equal To</string>
+    <string name="title_playing_game" translatable="false">Playing Game</string>
+    <string name="play_again" translatable="false">Play Again</string>
+    <string name="start_spin_people" translatable="false">Start spin people</string>
+    <string name="start_spin_dice" translatable="false">Start spin dice</string>
+    <string name="start_spin_dice_drink" translatable="false">Start spin dice drink</string>
+    <string name="the_result" translatable="false">Result</string>
+    <string name="title_game" translatable="false">Game</string>
 
-    <string name="offline">Offline</string>
-    <string name="online">Online</string>
-    <string name="place">Place</string>
-    <string name="create">Create</string>
+    <string name="offline" translatable="false">Offline</string>
+    <string name="online" translatable="false">Online</string>
+    <string name="place" translatable="false">Place</string>
+    <string name="create" translatable="false">Create</string>
 
-    <string name="dice_1">Dice 1</string>
-    <string name="dice_2">Dice 2</string>
-    <string name="dice_3">Dice 3</string>
-    <string name="dice_4">Dice 4</string>
-    <string name="dice_5">Dice 5</string>
-    <string name="dice_6">Dice 6</string>
+    <string name="dice_1" translatable="false">Dice 1</string>
+    <string name="dice_2" translatable="false">Dice 2</string>
+    <string name="dice_3" translatable="false">Dice 3</string>
+    <string name="dice_4" translatable="false">Dice 4</string>
+    <string name="dice_5" translatable="false">Dice 5</string>
+    <string name="dice_6" translatable="false">Dice 6</string>
 
-    <string name="drink_1">Drink 1</string>
-    <string name="drink_2">Lose your next turn</string>
-    <string name="drink_3">Player left drink 1</string>
-    <string name="drink_5">Choose a player to drink 1</string>
-    <string name="drink_6">Drink 1 with who right</string>
-    <string name="drink_7">Drink 2 with who right</string>
-    <string name="drink_8">Drink 1 with who left</string>
-    <string name="drink_9">Drink 2 with who left</string>
-    <string name="drink_10">Reverse</string>
-    <string name="drink_11">Make a rule</string>
-    <string name="drink_12">Everyone drink 1</string>
-    <string name="spin">Spin</string>
-    <string name="condition">Condition</string>
-    <string name="drink_4">Player right drink 1</string>
-    <string name="next">Next</string>
-    <string name="nham_eykorban">Nham Ey Korban!</string>
-    <string name="oun_jong_nham_ey">Oun Jong Nham Ey?</string>
-    <string name="alert_invalid_check">Places must be greater than 1.</string>
-    <string name="alert_invalid_person">People must be greater than 1.</string>
-    <string name="alert_invalid">Sorry , there is something that is not correct.</string>
+    <string name="drink_1" translatable="false">Drink 1</string>
+    <string name="drink_2" translatable="false">Lose your next turn</string>
+    <string name="drink_3" translatable="false">Player left drink 1</string>
+    <string name="drink_5" translatable="false">Choose a player to drink 1</string>
+    <string name="drink_6" translatable="false">Drink 1 with who right</string>
+    <string name="drink_7" translatable="false">Drink 2 with who right</string>
+    <string name="drink_8" translatable="false">Drink 1 with who left</string>
+    <string name="drink_9" translatable="false">Drink 2 with who left</string>
+    <string name="drink_10" translatable="false">Reverse</string>
+    <string name="drink_11" translatable="false">Make a rule</string>
+    <string name="drink_12" translatable="false">Everyone drink 1</string>
+    <string name="spin" translatable="false">Spin</string>
+    <string name="condition" translatable="false">Condition</string>
+    <string name="drink_4" translatable="false">Player right drink 1</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="nham_eykorban" translatable="false">Nham Ey Korban!</string>
+    <string name="oun_jong_nham_ey" translatable="false">Oun Jong Nham Ey?</string>
+    <string name="alert_invalid_check" translatable="false">Places must be greater than 1.</string>
+    <string name="alert_invalid_person" translatable="false">People must be greater than 1.</string>
+    <string name="alert_invalid" translatable="false">Sorry , there is something that is not correct.</string>
 </resources>

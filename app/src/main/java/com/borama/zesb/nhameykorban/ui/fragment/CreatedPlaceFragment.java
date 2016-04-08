@@ -24,8 +24,6 @@ import com.borama.zesb.nhameykorban.viewmodels.BaseViewModel;
 import com.borama.zesb.nhameykorban.viewmodels.PlaceGroupViewModel;
 import com.borama.zesb.nhameykorban.viewmodels.PlaceGroupsViewModel;
 
-import io.realm.RealmResults;
-
 public class CreatedPlaceFragment extends Fragment {
     private static CreatedPlaceFragment instance;
     private FragmentCreatedPlaceBinding mBinding;
@@ -80,8 +78,7 @@ public class CreatedPlaceFragment extends Fragment {
         return new ClickHandler<PlaceGroupViewModel>() {
             @Override
             public void onClick(PlaceGroupViewModel viewModel, View v) {
-                RealmResults<PlaceGroupRealm> placeGroupRealms = RealmHelper.init(getContext()).getObject(PlaceGroupRealm.class);
-                RealmHelper.init(getContext()).removeObject(placeGroupRealms.where().equalTo("id", viewModel.getModel().getId()));
+                RealmHelper.init(getContext()).removeObject(PlaceGroupRealm.class, "id", viewModel.getModel().getId());
                 mPlaceGroups.removeItem(viewModel);
             }
         };

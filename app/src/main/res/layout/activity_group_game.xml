@@ -86,81 +86,90 @@
                 android:layout_weight="1"
                 android:background="@color/board"
                 android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:orientation="horizontal">
 
                 <android.support.v7.widget.LinearLayoutCompat
-                    android:id="@+id/lilResultPerson"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
+                    android:gravity="top|center"
+                    android:orientation="horizontal">
 
-                    <android.support.v7.widget.CardView
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:id="@+id/lilResultPerson"
                         android:layout_width="@dimen/spin_item_size"
-                        android:layout_height="@dimen/spin_item_size"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        app:cardBackgroundColor="@{spinPerson.color}">
-
-                        <android.support.v7.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_person_white" />
-
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center|bottom"
-                        android:padding="4dp"
-                        android:text="@{spinPerson.name}" />
-
-                </android.support.v7.widget.LinearLayoutCompat>
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/txv_Equal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="4dp"
-                    android:text="@string/equalTo"
-                    android:visibility="gone" />
-
-                <android.support.v7.widget.LinearLayoutCompat
-                    android:id="@+id/lilResultThing"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-
-                    <android.support.v7.widget.CardView
-                        android:layout_width="@dimen/spin_item_size"
-                        android:layout_height="@dimen/spin_item_size"
-                        android:layout_gravity="center"
-                        android:background="@color/white"
-                        android:gravity="center"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@{spinThing.color}">
+                        android:visibility="gone">
 
-                        <android.support.v7.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/spin_image_size"
+                        <android.support.v7.widget.CardView
+                            android:layout_width="@dimen/spin_item_size"
+                            android:layout_height="@dimen/spin_item_size"
                             android:layout_gravity="center"
-                            android:adjustViewBounds="true"
-                            app:bindRes="@{spinThing.url}" />
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="@{spinPerson.color}">
 
-                    </android.support.v7.widget.CardView>
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_person_white" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@{spinPerson.name}" />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
 
                     <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txv_Equal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center|bottom"
-                        android:gravity="center"
+                        android:layout_marginTop="35dp"
                         android:padding="4dp"
-                        android:text="@{spinThing.name}" />
+                        android:text="@string/equalTo"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:id="@+id/lilResultThing"
+                        android:layout_width="@dimen/spin_item_size"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="@dimen/spin_item_size"
+                            android:layout_height="@dimen/spin_item_size"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="@{spinThing.color}">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spin_image_size"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                app:bindRes="@{spinThing.url}" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@{spinThing.name}" />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
 
                 </android.support.v7.widget.LinearLayoutCompat>
 

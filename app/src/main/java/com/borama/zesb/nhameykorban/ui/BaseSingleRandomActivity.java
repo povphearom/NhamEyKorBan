@@ -89,6 +89,8 @@ public abstract class BaseSingleRandomActivity<T> extends BaseActivity implement
 
     @Override
     public void onStopped() {
+        if (mBinding == null)
+            return;
         hasResult = true;
         mBinding.frlContentResult.removeAllViews();
         mBinding.frlContentResult.addView(getResultView());

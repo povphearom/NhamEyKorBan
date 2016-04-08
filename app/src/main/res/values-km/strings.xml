@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ញ៉ាំអីក៏បាន</string>
-    <string name="action_settings">កំណត់</string>
+    <string name="action_settings">ការកំណត់</string>
     <string name="about" translatable="false">អំពីយើង</string>
     <string name="game" translatable="false">ហ្គេម</string>
     <string name="group" translatable="false">ក្រុម</string>
@@ -37,7 +37,7 @@
     <string name="alert_skip">រំលង</string>
     <string name="drink_1">ផឹក១កែវ</string>
     <string name="drink_2">រំលងជុំនេះ នឹង វេនក្រោយ</string>
-    <string name="drink_3">អ្នកនៅឆ្វេងដៃផឹក១</string>
+    <string name="drink_3">អ្នកនៅឆ្វេងដៃផឹក១កែវ</string>
     <string name="drink_5">រើសម្នាក់ផឹក១កែវ</string>
     <string name="drink_6">ផឹក១កែវជាមួយអ្នកនៅស្ដាំដៃ</string>
     <string name="drink_7">ផឹក២កែវជាមួយអ្នកនៅស្ដាំដៃ</string>
@@ -46,7 +46,7 @@
     <string name="create">បង្កើត</string>
     <string name="spin">បង្វិល</string>
     <string name="drink_10">ត្រឡប់ក្រោយ</string>
-    <string name="drink_4">អ្នកនៅស្ដាំដៃផឹក១</string>
+    <string name="drink_4">អ្នកនៅស្ដាំដៃផឹក១កែវ</string>
     <string name="drink_12">ទាំងអស់គ្នាផឹក១កែវ</string>
     <string name="drink_11">បង្កើតច្បាប់</string>
     <string name="condition">លក្ខខ័ណ្ឌ</string>

@@ -63,6 +63,8 @@ public class GroupGameActivity extends BaseActivity {
         mSpinPeopleFragment.setOnScrolledListener(new SpinRecyclerView.OnScrolledListener() {
             @Override
             public void onStopped() {
+                if (mBinding == null)
+                    return;
                 mBinding.lilResultPerson.setVisibility(View.VISIBLE);
                 mBinding.txvEqual.setVisibility(View.VISIBLE);
                 mBinding.setSpinPerson(mPersonResult);
@@ -72,6 +74,8 @@ public class GroupGameActivity extends BaseActivity {
         mSpinThingsFragment.setOnScrolledListener(new SpinRecyclerView.OnScrolledListener() {
             @Override
             public void onStopped() {
+                if (mBinding == null)
+                    return;
                 mBinding.lilResultThing.setVisibility(View.VISIBLE);
                 mBinding.setSpinThing(mThingResult);
             }

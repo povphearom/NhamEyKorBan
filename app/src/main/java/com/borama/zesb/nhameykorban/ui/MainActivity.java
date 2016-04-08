@@ -1,6 +1,5 @@
 package com.borama.zesb.nhameykorban.ui;
 
-import android.content.res.Configuration;
 import android.databinding.DataBindingUtil;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,8 +22,6 @@ import com.borama.zesb.nhameykorban.viewmodels.BaseViewModel;
 import com.borama.zesb.nhameykorban.viewmodels.MenuViewModel;
 import com.borama.zesb.nhameykorban.viewmodels.MenusViewModel;
 
-import java.util.Locale;
-
 import io.realm.RealmList;
 
 
@@ -36,18 +33,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        try {
-            String languageToLoad = "km";
-            Locale locale = new Locale(languageToLoad);
-            Locale.setDefault(locale);
-            Configuration config = new Configuration();
-            config.locale = locale;
-            getBaseContext().getResources().updateConfiguration(config,
-                    getBaseContext().getResources().getDisplayMetrics());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         setSupportActionBar(mBinding.toolbar);

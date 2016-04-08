@@ -64,8 +64,11 @@ public class SpinRecyclerView extends RecyclerView {
     }
 
     public void resetCount() {
+        float current = MILLISECONDS_PER_INCH;
         count = 0;
-        scrollToPosition(10);
+        setDuration(0);
+        scrollToPosition(0);
+        setDuration(current);
     }
 
     public int getCount() {

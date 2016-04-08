@@ -59,4 +59,24 @@ public class RealmHelper {
         query.findFirst().removeFromRealm();
         realm.commitTransaction();
     }
+
+    public <T extends RealmObject> void removeObject(Class<T> clazz, String field, Object value) {
+        Realm realm = Realm.getInstance(getConfiguration());
+        realm.beginTransaction();
+        realm.setAutoRefresh(true);
+        RealmResults<T> data = realm.where(clazz).findAll();
+        RealmQuery<T> query;
+        if (value instanceof Integer)
+            query = data.where().equalTo(field, (int) value);
+        else if (value instanceof Boolean)
+            query = data.where().equalTo(field, (boolean) value);
+        else if (value instanceof Double)
+            query = data.where().equalTo(field, (double) value);
+        else if (value instanceof Float)
+            query = data.where().equalTo(field, (float) value);
+        else
+            query = data.where().equalTo(field, (String) value);
+        query.findFirst().removeFromRealm();
+        realm.commitTransaction();
+    }
 }

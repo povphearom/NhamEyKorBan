@@ -1,6 +1,5 @@
 package com.borama.zesb.nhameykorban.ui;
 
-import android.annotation.SuppressLint;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -9,12 +8,8 @@ import android.view.View;
 import com.borama.zesb.nhameykorban.R;
 import com.borama.zesb.nhameykorban.databinding.ActivityAskQuestionBinding;
 
-@SuppressLint("ValidFragment")
 public class AskQuestionActivity extends BaseActivity {
     private ActivityAskQuestionBinding mBinding;
-
-    public AskQuestionActivity() {
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
