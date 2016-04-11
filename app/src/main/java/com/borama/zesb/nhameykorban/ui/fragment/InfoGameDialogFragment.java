@@ -117,6 +117,8 @@ public class InfoGameDialogFragment extends DialogFragment {
         super.onStart();
         Dialog dialog = getDialog();
         if (dialog != null) {
+            dialog.getWindow()
+                    .getAttributes().windowAnimations = R.style.DialogAnimation;
             int width = ViewGroup.LayoutParams.MATCH_PARENT;
             int height = ViewGroup.LayoutParams.MATCH_PARENT;
             dialog.getWindow().setLayout(width, height);
